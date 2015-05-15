@@ -1,0 +1,89 @@
+{
+  "axes": [],
+  "data": [
+    {
+      "format": {
+        "feature": "us_counties.geo",
+        "type": "topojson"
+      },
+      "name": "counties",
+      "transform": [
+        {
+          "projection": "albersUsa",
+          "scale": 1000,
+          "translate": [
+            480,
+            250
+          ],
+          "type": "geopath",
+          "value": "data"
+        }
+      ],
+      "url": "us_counties.topo.json"
+    },
+    {
+      "format": {
+        "feature": "us_states.geo",
+        "type": "topojson"
+      },
+      "name": "states",
+      "transform": [
+        {
+          "projection": "albersUsa",
+          "scale": 1000,
+          "translate": [
+            480,
+            250
+          ],
+          "type": "geopath",
+          "value": "data"
+        }
+      ],
+      "url": "us_states.topo.json"
+    }
+  ],
+  "height": 500,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "counties"
+      },
+      "properties": {
+        "enter": {
+          "path": {
+            "field": "path"
+          },
+          "stroke": {
+            "value": "#7bccc4"
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "#084081"
+          }
+        }
+      },
+      "type": "path"
+    },
+    {
+      "from": {
+        "data": "states"
+      },
+      "properties": {
+        "enter": {
+          "path": {
+            "field": "path"
+          },
+          "stroke": {
+            "value": "#fff"
+          }
+        }
+      },
+      "type": "path"
+    }
+  ],
+  "padding": "auto",
+  "scales": [],
+  "width": 960
+}
